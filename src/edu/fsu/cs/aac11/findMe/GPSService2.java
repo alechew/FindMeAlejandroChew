@@ -133,7 +133,7 @@ public class GPSService2 extends Service {
         for (int i = 0 ; i < numbers.length ; i++)
         {
         	Log.i("GPSSERVICE", numbers[i]);
-       	 //smsManager1.sendTextMessage(numbers[i],null, finalMessage ,null, null);
+       	  smsManager1.sendTextMessage(numbers[i],null, finalMessage ,null, null);
         }
         super.onDestroy();
         Log.i("GPSSERVICE", "Super on Destroy is working");
