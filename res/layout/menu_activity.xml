@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#333366"
+    tools:context=".MenuActivity" >
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/worldimage" />
+
+    <ImageView
+        android:id="@+id/monitor"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/logoImage"
+        android:layout_below="@+id/parentMonitor"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/monitor1" />
+
+    <ImageView
+        android:id="@+id/parentMonitor"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/monitor"
+        android:layout_below="@+id/logoImage"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/parentmode" />
+
+    <ImageView
+        android:id="@+id/contact"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="selectContact"
+        android:src="@drawable/contact" />
+
+    <ImageView
+        android:id="@+id/servicestatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/parenttext"
+        android:layout_alignTop="@+id/logoImage"
+        android:layout_marginTop="26dp"
+         />
+
+    <ImageButton
+        android:id="@+id/information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/contact"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+		android:onClick="displayHelp"
+        android:src="@drawable/help" />
+
+    <ImageView
+        android:id="@+id/parenttext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/parentMonitor"
+        android:layout_toRightOf="@+id/parentMonitor"
+        android:src="@drawable/parenttext" />
+
+    <ImageView
+        android:id="@+id/monitortext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/parenttext"
+        android:layout_alignTop="@+id/monitor"
+        android:src="@drawable/monitormodetext" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/parenttext"
+        android:layout_below="@+id/parenttext"
+        android:ems="4"
+        android:text=""
+        android:inputType="textPassword" />
+
+
+    <ImageView
+        android:id="@+id/pStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/password"
+        android:layout_alignRight="@+id/parenttext"
+        android:onClick="parentMonitor" />
+
+    <ImageView
+        android:id="@+id/mStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/monitor"
+        android:layout_alignLeft="@+id/pStart"
+        android:onClick="monitor" />
+
+    <ImageView
+        android:id="@+id/set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/password"
+        android:layout_alignLeft="@+id/logoImage"
+        android:onClick="validatePassword"/>
+
+    <ImageView
+        android:id="@+id/informationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contact"
+        android:layout_alignLeft="@+id/logoImage"
+        android:layout_alignRight="@+id/setting"
+        android:layout_alignTop="@+id/logoImage"
+        android:src="@drawable/message"/>
+
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/contact"
+        android:layout_toRightOf="@+id/password"
+        android:onClick="setting"
+        android:src="@drawable/settingpicture1" />
+
+</RelativeLayout>

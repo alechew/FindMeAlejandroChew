@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333366" >
+
+    <ImageView
+        android:id="@+id/intervalimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/settings" />
+
+    <EditText
+        android:id="@+id/intervalTime"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/messageimage"
+        android:layout_toRightOf="@+id/messageimage"
+        android:ems="5"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageView
+        android:id="@+id/messageimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/intervalimage"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/interval" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/messageimage"
+        android:layout_below="@+id/intervalTime"
+        android:layout_marginTop="53dp"
+        android:src="@drawable/messagetosend" />
+
+    <EditText
+        android:id="@+id/theMessage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <ImageView
+        android:id="@+id/saveC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/dImage"
+        android:layout_toRightOf="@+id/intervalTime"
+        android:onClick="toMenu"
+        android:src="@drawable/save1" />
+
+    <ImageView
+        android:id="@+id/dImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/theMessage"
+        android:layout_below="@+id/theMessage"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="38dp"
+        android:onClick="toDefault"
+        android:src="@drawable/defaultimage" />
+
+</RelativeLayout>
